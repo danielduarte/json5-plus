@@ -73,6 +73,10 @@ describe('JSON5', () => {
             assert.strictEqual(JSON5.stringify(null), 'null')
         })
 
+        it('stringifies undefined', () => {
+            assert.strictEqual(JSON5.stringify(undefined), 'undefined')
+        })
+
         it('returns undefined for functions', () => {
             assert.strictEqual(JSON5.stringify(() => {}), undefined)
         })
